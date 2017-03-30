@@ -1,0 +1,8 @@
+Package: %%PACKAGE%%
+Version: %%VERSION%%
+Section: base
+Priority: optional
+Architecture: %%ARCHITECTURE%%
+Maintainer: Augusto Monteiro <augusto.monteiro@mycroft.ai>
+Description: %%DESCRIPTION%%
+
