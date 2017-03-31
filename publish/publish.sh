@@ -90,8 +90,6 @@ dpkg-deb --build ${DEB_BASE}
 mv *.deb ${TOP}/dist
 popd
 
-exit 1
-
 cd ${TOP}/dist
 _run s3cmd -c ${HOME}/.s3cfg.mycroft-artifact-writer sync --acl-public . s3://bootstrap.mycroft.ai/artifacts/apt/${ARCH}/msm/${VERSION}/
 echo ${VERSION} > latest
