@@ -3,7 +3,6 @@
 # fail on all errors
 set -Ee
 
-VERSION="1.1"
 TOP=$(cd $(dirname $0)/.. && pwd -L)
 BUILD_DIR=${TOP}/build
 DIST_DIR=${TOP}/dist
@@ -32,7 +31,7 @@ mkdir -p ${TOP}/dist
 pushd ${TOP}/build
 git clone https://github.com/MycroftAI/msm.git .
 VERSION="$(basename $(git describe --abbrev=0 --tags) | sed -e 's/v//g')"
-git checkout tags/release/${VERSION}
+git checkout tags/release/v${VERSION}
 popd
 
 function replace() {
